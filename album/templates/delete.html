@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+  <form style="width: 50%; margin: auto" method="post">
+    <h1>Are you sure you want to delete?</h1>
+    {% csrf_token %}
+    
+    {{ form.id }}
+    
+    <button class="btn btn-warning" type="submit">Delete</button>
+  </form>
+{% endblock %}
